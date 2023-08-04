@@ -6,6 +6,7 @@ const url = "http://localhost:8081/user";
 
 export const UserService = {
     save : async (user) => {
+        console.log(user)
         try {
             const response = await axios.post(url + "/save", user);
             return response;

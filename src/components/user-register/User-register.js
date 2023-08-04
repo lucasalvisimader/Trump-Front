@@ -5,19 +5,19 @@ import "./User-register.css";
 
 function UserRegister() {
     const [user, setUser] = useState({
-        "name": "",
-        "password": "",
-        "cards": []
+        "username": "",
+        "password": ""
     });
     
     const updateUser = (event) => {
         setUser({...user, [event.target.name] : event.target.value})
+        console.log(user)
     }
     
     const submitUser = () => {
         let password = document.getElementById("password").value;
         let confirmPassword = document.getElementById("confirm_password").value;
-
+        
         if(password !== confirmPassword) {
             document.getElementById("confirm_password").setCustomValidity("Passwords don't match");
         } else {
@@ -31,7 +31,7 @@ function UserRegister() {
             <Form.Group className="mb-3">
                 <Form.Label>Name</Form.Label>
                 <Form.Control id="name" type="text" placeholder="Name" 
-                name='name' onChange={updateUser} value={user.name} required/>
+                name='username' onChange={updateUser} value={user.username} required/>
             </Form.Group>
             <Form.Group className="mb-3" min="8">
                 <Form.Label>Password</Form.Label>

@@ -82,7 +82,6 @@ function Navbar(props) {
               <Dropdown.Toggle className='register_dropdown' variant="success" id="dropdown-basic">Register</Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="User-register">User</Dropdown.Item>
-                <Dropdown.Item href="Test-image">aaaa</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav.Item>
